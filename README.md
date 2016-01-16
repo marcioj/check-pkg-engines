@@ -23,7 +23,7 @@ For instance given the following package.json
 }
 ```
 
-If you have installed node v0.12.9 and npm 3.5.3, running `check-pkg-engines` will return an error exit code and display the following:
+If you have installed node v0.12.9 and npm 3.5.3, running `check-pkg-engines` will exit with an error code and display the following:
 
 ```sh
 ~ check-pkg-engines
