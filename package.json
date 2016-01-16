@@ -1,0 +1,38 @@
+{
+  "name": "check-pkg-engines",
+  "version": "0.0.0",
+  "description": "",
+  "repository": "marcioj/check-pkg-engines",
+  "engines": {
+    "node": ">=0.12",
+    "npm": "^3.0.0"
+  },
+  "author": {
+    "name": "Marcio Junior",
+    "email": "marciojunior1991@gmail.com",
+    "url": "https://github.com/marcioj"
+  },
+  "files": [
+    "lib"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "keywords": [],
+  "scripts": {
+    "build": "babel src --out-dir lib --copy-files",
+    "lint": "eslint src test",
+    "prepublish": "npm run build",
+    "test": "npm run lint && npm run test:coverage",
+    "test:coverage": "nyc --require babel-core/register --reporter html mocha && nyc check-coverage --branches 90",
+    "watch": "mocha -w"
+  },
+  "devDependencies": {
+    "babel-core": "^6.4.0",
+    "babel-eslint": "^5.0.0-beta6",
+    "babel-preset-es2015": "^6.3.13",
+    "chai": "^3.2.0",
+    "eslint": "^1.10.3",
+    "mocha": "^2.3.0",
+    "nyc": "^5.3.0"
+  }
+}
