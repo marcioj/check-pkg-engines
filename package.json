@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "",
   "repository": "marcioj/check-pkg-engines",
+  "bin": {
+    "check-pkg-engines": "./lib/cli.js"
+  },
   "engines": {
     "node": ">=0.12",
     "npm": "^3.0.0"
@@ -34,5 +37,9 @@
     "eslint": "^1.10.3",
     "mocha": "^2.3.0",
     "nyc": "^5.3.0"
+  },
+  "dependencies": {
+    "read-pkg": "^1.1.0",
+    "semver": "^5.1.0"
   }
 }
